@@ -15,6 +15,15 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import '@percy/cypress'
+import 'cypress-plugin-snapshots/commands';
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+let percyHealthCheck = require('@percy/cypress/task')
+
+module.exports = (on, config) => {
+  on("task", percyHealthCheck);
+
+};
