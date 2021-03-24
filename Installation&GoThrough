@@ -1,0 +1,32 @@
+Cypress Screenshot functionality is: 
+https://www.npmjs.com/package/cypress-plugin-snapshots 
+
+Installation All Commands till now:--------------------
+apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+npm install cypress --save-dev
+$(npm bin)/cypress open
+
+
+Mochawesome installation------------------------------------
+npm install --save-dev mochawesome
+npm install mochawesome-merge --save-dev
+npm install -g mochawesome-report-generator
+
+
+Run commands in Terminal for Cypress:
+- Code to run Cypress:  ./node_modules/.bin/cypress open
+- Headless mode run: ./node_modules/.bin/cypress run
+- To run for the Cypress dashboard: ./node_modules/.bin/cypress run --record --key 3554230a-fdea-4f74-a835-63b2cfdf0b28
+
+
+For Reports:
+./node_modules/.bin/cypress run --spec cypress/integration/final_code/alice.spec.js --browser chrome
+
+For test suite:
+./node_modules/.bin/cypress run --spec cypress/integration/final_code/*.js --browser chrome
+
+Npm merge
+Npm merge_report (merge_report is the variable name set in package.json)
+
+
+
