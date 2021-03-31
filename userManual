@@ -20,13 +20,13 @@ Run commands in Terminal for Cypress:
 
 
 For Reports:
-./node_modules/.bin/cypress run --spec cypress/integration/final_code/alice.spec.js --browser chrome
+./node_modules/.bin/cypress run --spec cypress/integration/[FOLDER_NAME]/[FILE_NAME OR *].js --browser chrome
 
 For test suite:
 ./node_modules/.bin/cypress run --spec cypress/integration/final_code/*.js --browser chrome
 
-Npm merge
-Npm merge_report (merge_report is the variable name set in package.json)
+Npm merge to create a collective JSON report
+Npm merge_report (merge_report is the variable name set in package.json) to create an HTML version of the Reports
 
 
 
