@@ -1,18 +1,18 @@
   /// <reference types="Cypress"/>
-
   context('Actions', () => {
     beforeEach(() => {
-      cy.visit('https://cmd.addwebprojects.com/hello-bars/')
+      cy.visit('http://cmd.lndo.site/hello-bars/')
     })
     
     it('For Checking Height in Different Desktop resolutions', function(){
     // <991 is Tablet/Mobile -------------  //992 and above is Desktop 
-    //For Mobile
-    cy.viewport("iphone-6+")
-    cy.get('.hello-bar').invoke('height').should('be.greaterThan', 153.5).and('be.lessThan',155)
     
+    //For Mobile
+      cy.viewport(550, 450)
+      cy.get('.hello-bar').invoke('height').should('be.greaterThan', 144.5).and('be.lessThan',146)
+      
     cy.viewport(700,300)
-    cy.get('.hello-bar').invoke('height').should('be.greaterThan', 153.5).and('be.lessThan',155)
+    cy.get('.hello-bar').invoke('height').should('be.greaterThan', 144.5).and('be.lessThan',146)
     
     cy.viewport(991,400)
     cy.get('.hello-bar').invoke('height').should('be.greaterThan', 63).and('be.lessThan',65)
@@ -51,7 +51,6 @@
       //   // the returned value will have double quotes around it, but this is correct
         
       // })
-      
       
       //Content wrap //Failed case below
       // cy.get('.hello-bar-contentwrap').should('be.visible')
@@ -95,7 +94,6 @@
 
     it('Button Readmore', function(){
 
-        
         // cy.get('.vc_btn3-inline').should('have.css','width','93.625px').should('have.class','.hello-innercustom-btn')
         // .should('have.css','border','1px solid').should('have.css','color','rgb(141, 235, 210').should('have.css','padding-right','8px')
        
@@ -130,7 +128,6 @@
     //    //Cross button // The below case will Fail as the size should be 24px as per figma but currently 48 as per site
     //    cy.get('.vc_icon_element-inner').should('have.css','width','24px').should('have.css','height','24px') 
     // })
-
 
     it('Check Spacer', function(){
     cy.get('.vc_empty_space')
