@@ -9,6 +9,7 @@
       "overwrite": false,
       "html": true,
       "json": true 
-    }
+    },
+  "screenshotsFolder": "TestReport/assets"
   
 }
