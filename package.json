@@ -1,16 +1,26 @@
 {
   "name": "cmd_cypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "creating cmd test cases for mobile and desktop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/output.json",
+    "mergeReport": "marge cypress/reports/output.json --reportDir ./ --inline"
   },
+  
   "author": "Akash",
   "license": "ISC",
+
   "devDependencies": {
+    "@percy/cypress": "^2.3.4",
     "chai": "^4.3.4",
     "cypress": "^6.8.0",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0"
+  },
+  "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4"
   }
 }
