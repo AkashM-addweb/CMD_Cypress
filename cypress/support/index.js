@@ -18,12 +18,21 @@ import './commands'
 import '@percy/cypress'
 import 'cypress-plugin-snapshots/commands';
 
+import addContext from 'mochawesome/addContext';
 
+Cypress.on('test:after:run', (test, runnable) => {
+  if (test.state === 'failed') {
+    const screenshot = `${Cypress.config('screenshotsFolder')}/${
+      Cypress.spec.name
+    }/${runnable.parent.title} -- ${test.title} (failed).png`;
+    addContext({ test }, screenshot);
+  }
+});
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 let percyHealthCheck = require('@percy/cypress/task')
 
 module.exports = (on, config) => {
   on("task", percyHealthCheck);
-
+ 
 };
