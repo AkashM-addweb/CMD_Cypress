@@ -1,3 +1,14 @@
 {
-  "projectId": "nbjo78"
+  "projectId": "nbjo78",
+
+"reporter": "mochawesome",
+    "reporterOptions": {
+      "reporterEnabled":"mochawesome",
+      "reportDir": "cypress/reports/",
+      "reportFilename":"reports",
+      "overwrite": false,
+      "html": true,
+      "json": true 
+    }
+  
 }
