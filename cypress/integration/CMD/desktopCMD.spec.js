@@ -82,6 +82,7 @@
 
     //Visibility
     cy.get('.hello-bar').should('be.visible').toMatchImageSnapshot()
+    cy.screenshot()
 
     //Color of the Bar
     cy.get('.hello-bar').should('have.css','background-color','rgb(0, 0, 0)')
